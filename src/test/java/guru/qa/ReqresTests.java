@@ -21,7 +21,7 @@ public class ReqresTests {
 
     @DisplayName("User can successfully create a new user")
     @Test
-    void SuccessfulCreateUser() {
+    void successfulCreateUser() {
         String authData = "{ \"name\": \"Elena\", \"job\": \"QA\"}";
         given()
                 .log().uri()
@@ -43,7 +43,7 @@ public class ReqresTests {
 
     @DisplayName("User can get successfully registered")
     @Test
-    void SuccessfuRegisterUser() {
+    void successfuRegisterUser() {
         String authData = "{ \"email\": \"eve.holt@reqres.in\", \"password\": \"pistol\"}";
         given()
                 .log().uri()
@@ -63,7 +63,7 @@ public class ReqresTests {
 
     @DisplayName("User gets an error when registering with missing password")
     @Test
-    void MissingPasswordRegisterUser() {
+    void missingPasswordRegisterUser() {
         String authData = "{ \"email\": \"sydney@fife\"}";
         given()
                 .log().uri()
@@ -82,7 +82,7 @@ public class ReqresTests {
 
     @DisplayName("User gets an error when registering with missing email")
     @Test
-    void MissingEmailRegisterUser() {
+    void missingEmailRegisterUser() {
         String authData = "{ \"password\": \"pistol\"}";
         given()
                 .log().uri()
@@ -101,7 +101,7 @@ public class ReqresTests {
 
     @Test
     @DisplayName("User gets an error when a user is not found")
-    void UserNotFound() {
+    void userNotFound() {
         given()
                 .log().uri()
                 .log().method()
@@ -116,7 +116,7 @@ public class ReqresTests {
 
     @Test
     @DisplayName("User can successfully update an existing user")
-    void SuccessfuUpdateUser() {
+    void successfuUpdateUser() {
         String updateUserBody = "{\"name\": \"Elena\", \"job\": \"QA\"}";
         given()
                 .log().uri()
